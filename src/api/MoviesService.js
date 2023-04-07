@@ -5,10 +5,12 @@ const withBaseUtl = (path)=>`${BASE_URL}${path}?api_key=${API_KEY}`
 
 export class MoviesService {
 
+  // busca os filmes populares
   static getMovies(){
     return axios(withBaseUtl('movie/popular'))
   }
   
+  //busca somente um filme por id
   static getMovieDetail(id) {
     return axios(withBaseUtl(`movie/${id}`))
   }

@@ -1,8 +1,8 @@
 import { useEffect ,useState} from "react";
 import { MoviesService } from "../api/MoviesService";
-import { Movie } from "../components/Movie";
+import { Movie } from "../components/Movie"; 
 
-export const Movies = () => {
+export function Movies() {
 
   const [movies,setMovies] = useState([]);
 
@@ -23,6 +23,7 @@ export const Movies = () => {
   return(
 
     <div className="container">
+      
       <div className="row gy-5">
         
         {movies.map((movie)=>(
@@ -31,8 +32,8 @@ export const Movies = () => {
            </div> 
         ))}
 
-      </div>
-      
+      </div>  
+
     </div>
 
   )

@@ -1,3 +1,4 @@
+// mapeia as rotas dos componentes
 import { MovieDetail } from "./views/MovieDetail";
 import {Movies} from "./views/Movies";
 import {
