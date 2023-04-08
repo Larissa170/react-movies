@@ -2,9 +2,9 @@ import { useState } from "react";
 import { MoviesService } from "../api/MoviesService";
 import { useParams } from "react-router-dom";
 
-export function MovieDetail(){
+export function MovieDetail() {
   const [movie,setMovie] = useState({});
-  const{movieId} = useParams();
+  const {movieId} = useParams();
 
   const getMovie = async () => {
     const {data} = await MoviesService.getMovieDetail(movieId);
@@ -27,7 +27,7 @@ export function MovieDetail(){
             <ul>
               <li>Budget:{movie.budget}</li>
               <li>Original Language: {movie.original_language}</li>
-              <li>Popularity:{movie.populatiry}</li>
+              <li>Popularity:{movie.popularity}</li>
             </ul>
           </div>
         </div>
